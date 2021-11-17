@@ -112,7 +112,7 @@ body {
 }
 #header.scroll .logo span {
   color: white;
-  transition: 00.4s;
+  transition: 00.5s;
 }
 #header.scroll .logo {
   color: var(--base-color);
@@ -376,3 +376,33 @@ nav.show div.icon-close {
 #contact ul li i {
   color: var(--base-color);
 }
+/*=========== FOOTER ===========*/
+footer {
+  background: var(--base-color);
+}
+footer .logo {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--body-color);
+}
+footer .logo span {
+  color: var(--text-color);
+}
+footer .brand p {
+  color: var(--text-color-light);
+  margin-bottom: 0.75rem;
+}
+footer i {
+  font-size: 1.5rem;
+  color: var(--text-color-light);
+}
+footer .social a {
+  margin-right: 2rem;
+  transition: 0.3s;
+  display: inline-block;
+}
+footer .social a:hover {
+  transform: translateY(-8px);
+}
+/*=========== Responsive ===========*/
+/*=========== BreakPoint 992 ===========*/

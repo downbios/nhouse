@@ -24,7 +24,7 @@ img {
   --base-color-second: hsl(var(--hue) 70% 88%);
   --base-color-alt: hsl(var(--hue) 80% 65%);
   --title-color: hsl(var(--hue) 41% 10%);
-  --text-color: hsl(0 0% 46%);
+  --text-color: hsl(0 0% 25%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
 }
@@ -106,12 +106,16 @@ body {
   width: 100%;
 }
 #header.scroll {
-  background: var(--base-color);
+  background: var(--text-color);
   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
   transition: 00.5s;
 }
 #header.scroll .logo span {
   color: white;
+  transition: 00.4s;
+}
+#header.scroll .logo {
+  color: var(--base-color);
   transition: 00.5s;
 }
 main {
@@ -273,7 +277,7 @@ nav.show div.icon-close {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
 }
-/*=========== ABOUT ===========*/
+/*=========== SERVICES ===========*/
 .cards.grid {
   gap: 1.5rem;
 }
@@ -293,4 +297,82 @@ nav.show div.icon-close {
 .card .title {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
+}
+/*=========== TESTIMONY ===========*/
+#testimonials {
+  background: white;
+}
+#testimonials .container {
+  margin-left: 0;
+  margin-right: 0;
+}
+#testimonials header {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
+  margin-bottom: 0;
+}
+#testimonials blockquote {
+  padding: 2rem;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+  border-radius: 0.25rem;
+}
+#testimonials blockquote p {
+  position: relative;
+  text-indent: 1.875rem;
+  margin-bottom: 1.5rem;
+}
+#testimonials blockquote p span {
+  font: 700 3rem serif;
+  position: absolute;
+  top: -0.5rem;
+  left: -1.875rem;
+  color: var(--base-color);
+}
+#testimonials cite {
+  display: flex;
+  align-items: center;
+}
+#testimonials cite img {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+  clip-path: circle();
+  margin-right: 0.5rem;
+}
+/*=========== SWIPER CARROUSEL ===========*/
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+.swiper-pagination-bullet {
+  width: 00.75rem;
+  height: 00.75rem;
+}
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
+/*=========== CONTACT ===========*/
+#contact p strong {
+  color: var(--base-color);
+}
+#contact .grid {
+  gap: 4rem;
+}
+#contact .text p {
+  margin-bottom: 2rem;
+}
+#contact .button i,
+#contact ul li i {
+  font-size: 1.5rem;
+  margin-right: 0.625rem;
+}
+#contact ul.grid {
+  gap: 2rem;
+}
+#contact ul li {
+  display: flex;
+  align-items: center;
+}
+#contact ul li i {
+  color: var(--base-color);
 }

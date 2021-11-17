@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt_BR">
   <head>
+    <!--Page Info-->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Downbios | TI Solution´s and Develop Web</title>
-    <!--fonts/styles-->
+    <!--fonts/icones/styles-->
     <link rel="stylesheet" href="assets/fonts/style.css" />
+    <!-- swiper -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
     <!--styles/css-->
     <link rel="stylesheet" href="style.css" />
     <!--fonts-->
@@ -39,11 +45,7 @@
       <section class="section" id="home">
         <div class="container grid">
           <div class="image">
-            <img
-              src="assets/images/fundodb.jpg"
-              alt="home downbios"
-              srcset=""
-            />
+            <img src="assets/images/fundodb.jpg" alt="home downbios" />
           </div>
           <div class="text">
             <h2 class="title">TI Solution´s and Develop Web</h2>
@@ -62,22 +64,24 @@
           <div class="image">
             <img src="/assets/images/fundodb2.png" alt="sobre downbios" />
           </div>
-          <div class="text"></div>
-          <h2 class="title">Sobre nós...</h2>
-          <p>
-            Olá, o Downbios, surgiu com a ideia de facilitar a vida da maioria
-            dos técnicos em informática, aqui você pode encontrar os mais
-            diversos tipos de arquivos de BIOS, e das mais diversificadas
-            marcas.
-          </p>
-          <p>
-            Aqui você também encontra suporte, manutenção, e reparo, para
-            notebooks, computadores de mesa, e impressoras, das mais diversas
-            marcas, confira nossos serviços
-          </p>
+          <div class="text">
+            <h2 class="title">Sobre nós...</h2>
+            <p>
+              Olá, o Downbios, surgiu com a ideia de facilitar a vida da maioria
+              dos técnicos em informática, aqui você pode encontrar os mais
+              diversos tipos de arquivos de BIOS, e das mais diversificadas
+              marcas.
+            </p>
+            <p>
+              Aqui você também encontra suporte, manutenção, e reparo, para
+              notebooks, computadores de mesa, e impressoras, das mais diversas
+              marcas, confira nossos serviços
+            </p>
+          </div>
         </div>
       </section>
-      <!--Divisor de Seções 1-->
+      <!-- fim/about/containder -->
+      <!--Divisor de Seções 2-->
       <div class="divider-2"></div>
       <!-- services/containder -->
       <section class="section" id="services">
@@ -125,7 +129,107 @@
           </div>
         </div>
       </section>
+      <!-- fim/services/containder -->
+      <!--Divisor de Seções 1-->
+      <div class="divider-1"></div>
+      <!-- testimony/container -->
+      <section class="section" id="testimonials">
+        <div class="container">
+          <header>
+            <h2 class="title">Depoimentos!</h2>
+          </header>
+          <div class="testimonial swiper">
+            <div class="swiper-wrapper">
+              <div class="testimony swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
+                    ullam voluptatem harum corrupti placeat exercitationem
+                    voluptatibus fugit, sint facere ut tenetur debitis. Vero
+                    accusantium expedita eveniet cumque aut asperiores eius?
+                  </p>
+                  <cite>
+                    <img src="/assets/images/avatar.png" alt="deployments" />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimony swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
+                    ullam voluptatem harum corrupti placeat exercitationem
+                    voluptatibus fugit, sint facere ut tenetur debitis. Vero
+                    accusantium expedita eveniet cumque aut asperiores eius?
+                  </p>
+                  <cite>
+                    <img src="/assets/images/avatar.png" alt="deployments" />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+
+              <div class="testimony swiper-slide">
+                <blockquote>
+                  <p>
+                    <span>&ldquo;</span>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea
+                    ullam voluptatem harum corrupti placeat exercitationem
+                    voluptatibus fugit, sint facere ut tenetur debitis. Vero
+                    accusantium expedita eveniet cumque aut asperiores eius?
+                  </p>
+                  <cite>
+                    <img src="/assets/images/avatar.png" alt="deployments" />
+                    Wanessa Souza
+                  </cite>
+                </blockquote>
+              </div>
+            </div>
+            <!-- pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+      <!-- fim/testimony/container -->
+      <!--Divisor de Seções 2-->
+      <div class="divider-2"></div>
+      <!-- contact/container -->
+      <section class="section" id="contact">
+        <div class="container grid">
+          <div class="text">
+            <h2 class="title">Entre em contato!</h2>
+            <p>
+              Olá, seja bem vindo ao <strong>DownBios</strong>, se você tem
+              alguma sugestão, reclamação, ou até mesmo alguma dúvida, entre em
+              contato! teremos o imenso prazer de lhe responder o mais breve
+              possível.
+            </p>
+            <a
+              href="https://api.whatsapp.com/send?phone=+5587988279357&text=Olá! Downbios"
+              class="button"
+              target="_blank"
+              ><i class="icon-whatsapp"></i> Enviar uma Menssagem!</a
+            >
+          </div>
+          <div class="links">
+            <ul class="grid">
+              <li><i class="icon-phone"></i>87 9 8827-9357</li>
+              <li><i class="icon-facebook"></i>@DownBios</li>
+              <li><i class="icon-mail"></i>downbios@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- fim/contact/container -->
     </main>
+    <!--script scroll reveal-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--script/swiper-->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    <!--script switch toogle-->
     <script src="main.js"></script>
   </body>
 </html>

@@ -127,10 +127,6 @@ body {
   color: var(--base-color);
   transition: 00.5s;
 }
-#header.scroll .title {
-  color: var(--text-color-light);
-  transition: 00.5s;
-}
 /*=========== LOGO ===========*/
 .logo {
   font: 700 1.31rem var(--title-font);
@@ -438,6 +434,10 @@ footer .social a:hover {
     /* fonts */
     --title-font: 'Poppins', sans-serif;
     --body-font: 'DM Sans', sans-serif;
+  }
+  #header.scroll .title {
+    color: var(--text-color-light);
+    transition: 00.5s;
   }
   /* reusable classes*/
   .container {

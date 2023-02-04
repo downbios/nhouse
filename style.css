@@ -12,7 +12,7 @@ a {
 }
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 /*=========== VARIABLES ===========*/
 :root {
@@ -228,22 +228,10 @@ nav.show div.icon-close {
 #home .image {
   position: relative;
 }
-#home .image::before {
-  content: '';
-  height: 100%;
-  width: 100%;
-  background: var(--base-color);
-  position: absolute;
-  top: -16.8%;
-  left: -16.7%;
-  z-index: 0;
-}
 #home .image img {
   position: relative;
-  right: 10rem;
 }
-#home .image img,
-#home .image::before {
+#home .image img{
   border-radius: 2rem;
 }
 #home .text {

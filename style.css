@@ -12,7 +12,7 @@ a {
 }
 img {
   width: 100%;
-  height: auto;
+  height: 100%;
 }
 /*=========== VARIABLES ===========*/
 :root {
@@ -235,16 +235,16 @@ nav.show div.icon-close {
   background: var(--base-color);
   position: absolute;
   top: -16.8%;
-  left: 16.7%;
+  left: -16.7%;
   z-index: 0;
 }
 #home .image img {
   position: relative;
-  right: 2.93rem;
+  right: 10rem;
 }
 #home .image img,
 #home .image::before {
-  border-radius: 0.25rem;
+  border-radius: 2rem;
 }
 #home .text {
   margin-left: 1.5rem;
@@ -282,7 +282,7 @@ nav.show div.icon-close {
 }
 #about .image img,
 #about .image::before {
-  border-radius: 0.25rem;
+  border-radius: 2rem;
 }
 #about .text {
   margin-left: 1.5rem;

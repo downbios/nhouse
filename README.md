@@ -1,6 +1,8 @@
 # Downbios
 
-**Website:** [downbios.github.io](https://downbios.github.io/)
+**URL:** [downbios.github.io](https://downbios.github.io/)
+
+🖥️💾🔧
 
 Downbios é um site portfólio corporativo desenvolvido por Ian Adson, criador do projeto. Este site tem como objetivo promover seu trabalho de desenvolvimento web e também serve como uma plataforma de downloads de arquivos para técnicos de informática.
 
@@ -12,10 +14,10 @@ O Downbios surgiu com a ideia de facilitar a vida da maioria dos técnicos em in
 
 O site Downbios foi desenvolvido utilizando as seguintes tecnologias:
 
-- HTML
-- CSS
-- JavaScript
-- Node.js
+💻 HTML
+🎨 CSS
+⚙️ JavaScript
+🚀 Node.js
 
 Essas tecnologias modernas e poderosas possibilitaram a criação de uma experiência de usuário envolvente e responsiva, garantindo uma navegação suave e intuitiva.
 
@@ -24,5 +26,3 @@ Visite o [Downbios](https://downbios.github.io/) e confira nosso portfólio e os
 Entre em contato conosco para mais informações e descubra como podemos ajudar você em suas necessidades de informática.
 
 ---
-
-Lembre-se de personalizar e adaptar a descrição de acordo com as informações e características específicas do seu site/repositório.

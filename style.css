@@ -18,21 +18,19 @@ img {
 :root {
   --header-height: 4.5rem;
   /* colors */
-  --hue: 45;
+  --hue: 5;
   /* HSL color mode */
   --base-color: hsl(var(--hue) 90% 60%);
   --base-color-second: hsl(var(--hue) 70% 88%);
   --base-color-alt: hsl(var(--hue) 80% 65%);
-  --title-color: hsl(var(--hue) 41% 10%);
-  --text-color: hsl(0 0% 25%);
-  --text-color-light: hsl(0 0% 98%);
-  --body-color: hsl(0 0% 98%);
+  --title-color: hsl(var(--hue) 30% 0%);
+  --body-color: hsl(0 0% 100%);
   /* fonts-size */
   --title-font-size: 1.875rem;
   --subtitle-font-size: 1rem;
   /* fonts */
-  --title-font: 'Poppins', sans-serif;
-  --body-font: 'DM Sans', sans-serif;
+  --title-font: "Poppins", sans-serif;
+  --body-font: "DM Sans", sans-serif;
 }
 /*=========== BASE ===========*/
 html {
@@ -40,7 +38,7 @@ html {
 }
 body {
   font: 400 1rem var(--body-font);
-  color: var(--text-color);
+  color: var(--base-color);
   background: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
@@ -51,7 +49,7 @@ body {
 }
 .button {
   background-color: var(--base-color);
-  color: var(--text-color-light);
+  color: var(--body-color);
   height: 3.5rem;
   display: inline-flex;
   align-items: center;
@@ -63,26 +61,10 @@ body {
 .button:hover {
   background: var(--base-color-alt);
 }
-.divider-1 {
-  height: 1px;
-  background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 36%, 57%, 1),
-    hsla(var(--hue), 50%, 88%, 0.34)
-  );
-}
-.divider-2 {
-  height: 1px;
-  background: linear-gradient(
-    270deg,
-    hsla(var(--hue), 50%, 88%, 0.34),
-    hsla(var(--hue), 36%, 57%, 1)
-  );
-}
 /*=========== LAYOUT ===========*/
 .container {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .grid {
   display: grid;
@@ -98,59 +80,51 @@ body {
   font-size: var(--subtitle-font-size);
 }
 .section header {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
 }
 .section header strong {
-  color: var(--base-color);
+  color: var(--base-color-second);
 }
+/*=========== HEADER ===========*/
 #header {
-  border-bottom: 1px solid #e4e4e4;
-  margin-bottom: 2rem;
+  height: var(--header-height);
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 50%);
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 100;
-  background-color: var(--body-color);
+  background-color: var(--title-color);
   width: 100%;
 }
-#header.scroll {
-  background: var(--text-color);
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.1);
-  transition: 00.5s;
-}
-#header.scroll .logo span {
-  color: white;
-  transition: 00.5s;
-}
-#header.scroll .logo {
-  color: var(--base-color);
-  transition: 00.5s;
-}
-/*=========== LOGO ===========*/
-.logo {
-  font: 700 1.31rem var(--title-font);
-  color: var(--title-color);
-}
-.logo span {
-  color: var(--base-color);
-}
-.logo-alt span {
+header i {
+  font-size: 1.5rem;
   color: var(--body-color);
+}
+header .social {
+  grid-auto-flow: column;
+  width: fit-content;
+}
+header .social a {
+  transition: 0.3s;
+  display: inline-block;
+}
+header .social a:hover {
+  transform: translateY(-8px);
 }
 /*=========== NAVIGATION ===========*/
 nav {
-  height: var(--header-height);
   display: flex;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+  margin-top: 1rem;
 }
 nav ul li {
   text-align: center;
 }
 nav ul li a {
-  transition: color 0.2s;
+  transition: color 0.4s;
   position: relative;
 }
 nav ul li a:hover,
@@ -158,14 +132,14 @@ nav ul li a.active {
   color: var(--base-color);
 }
 nav ul li a::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
   background: var(--base-color);
   position: absolute;
   left: 0;
   bottom: -1.5rem;
-  transition: width 0.2s;
+  transition: width 0.6s;
 }
 nav ul li a:hover::after,
 nav ul li a.active::after {
@@ -179,6 +153,9 @@ nav .menu {
 }
 nav .menu ul {
   display: none;
+}
+nav .brand img {
+  max-width: 9rem;
 }
 /*=========== SHOW/NAVIGATION ===========*/
 nav.show .menu {
@@ -197,12 +174,12 @@ nav.show .menu ul {
   display: grid;
 }
 nav.show ul.grid {
-  gap: 4rem;
+  gap: 1rem;
 }
 /*=========== TOGGLE MENU ===========*/
 .toggle {
   color: var(--base-color);
-  font-size: 1.5rem;
+  font-size: 2rem;
   cursor: pointer;
 }
 nav .icon-close {
@@ -211,7 +188,7 @@ nav .icon-close {
   position: absolute;
   right: 1.5rem;
   top: -1.5rem;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 nav.show div.icon-close {
   visibility: visible;
@@ -228,16 +205,26 @@ nav.show div.icon-close {
 #home .image {
   position: relative;
 }
+#home .image::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: var(--base-color);
+  position: absolute;
+  top: -5%;
+  left: -5%;
+  z-index: 0;
+}
 #home .image img {
   position: relative;
 }
-#home .image img{
+#home .image img,
+#home .image::before {
   border-radius: 2rem;
 }
 #home .text {
   margin-left: 1.5rem;
   margin-right: 1.5rem;
-  text-align: center;
 }
 #home .text h1 {
   margin-bottom: 1rem;
@@ -245,40 +232,9 @@ nav.show div.icon-close {
 #home .text p {
   margin-bottom: 2rem;
 }
-/*=========== ABOUT ===========*/
-#about {
-  background: white;
-}
-#about .container {
-  margin: 0;
-}
-#about .image {
-  position: relative;
-}
-#about .image::before {
-  content: '';
-  height: 100%;
-  width: 100%;
-  background: var(--base-color);
-  position: absolute;
-  top: -8.3%;
-  left: -33%;
-  z-index: 0;
-}
-#about .image img {
-  position: relative;
-}
-#about .image img,
-#about .image::before {
-  border-radius: 2rem;
-}
-#about .text {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
 /*=========== SERVICES ===========*/
 .cards.grid {
-  gap: 1.5rem;
+  gap: 1rem;
 }
 .card {
   padding: 3.625rem 2rem;
@@ -297,120 +253,48 @@ nav.show div.icon-close {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
 }
-/*=========== TESTIMONY ===========*/
-#testimonials {
-  background: white;
+/*=========== FOOTER ===========*/
+footer .title,
+footer {
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 50%);
+  color: var(--body-color);
 }
-#testimonials .container {
-  margin-left: 0;
-  margin-right: 0;
-  position: relative;
-  overflow: hidden;
-}
-#testimonials header {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-  margin-bottom: 0;
-}
-#testimonials blockquote {
-  padding: 2rem;
-  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
-  border-radius: 0.25rem;
-}
-#testimonials blockquote p {
-  position: relative;
-  text-indent: 1.875rem;
-  margin-bottom: 1.5rem;
-  color: var(--title-color);
-}
-#testimonials blockquote p span {
-  font: 700 3rem serif;
-  position: absolute;
-  top: -0.5rem;
-  left: -1.875rem;
+footer p strong {
   color: var(--base-color);
 }
-#testimonials cite {
-  display: flex;
-  align-items: center;
-}
-#testimonials cite img {
-  width: 2rem;
-  height: 2rem;
-  object-fit: cover;
-  clip-path: circle();
-  margin-right: 0.5rem;
-}
-/*=========== SWIPER CARROUSEL ===========*/
-.swiper-slide {
-  height: auto;
-  padding: 4rem 1rem;
-}
-.swiper-pagination-bullet {
-  width: 00.75rem;
-  height: 00.75rem;
-}
-.swiper-pagination-bullet-active {
-  background: var(--base-color);
-}
-/*=========== CONTACT ===========*/
-#contact p strong {
-  color: var(--base-color);
-}
-#contact .grid {
+footer .grid {
   gap: 4rem;
 }
-#contact .text p {
+footer .text p {
   margin-bottom: 2rem;
 }
-#contact .button i,
-#contact ul li i {
+footer .button i,
+footer ul li i {
   font-size: 1.5rem;
   margin-right: 0.625rem;
 }
-#contact ul.grid {
+footer ul.grid {
   gap: 2rem;
 }
-#contact ul li {
+footer ul li {
   display: flex;
   align-items: center;
 }
-#contact ul li i {
+footer ul li i {
   color: var(--base-color);
 }
-/*=========== FOOTER ===========*/
 footer {
-  background: var(--base-color);
+  background: var(--title-color);
 }
 footer.section {
   padding: 4rem 0;
 }
-footer .logo {
-  display: inline-block;
-  margin-bottom: 1.5rem;
-  color: var(--body-color);
-}
-footer .logo span {
-  color: var(--text-color);
+footer .brand img {
+  max-width: 300px;
 }
 footer .brand p {
-  color: var(--text-color-light);
-  margin-bottom: 0.75rem;
-}
-footer i {
-  font-size: 1.5rem;
-  color: var(--text-color-light);
-}
-footer .social {
-  grid-auto-flow: column;
-  width: fit-content;
-}
-footer .social a {
-  transition: 0.3s;
-  display: inline-block;
-}
-footer .social a:hover {
-  transform: translateY(-8px);
+  color: var(--body-color);
+  margin-bottom: 0.25rem;
 }
 /*=========== Responsive ===========*/
 /* BreakPoint 1200 > */
@@ -420,12 +304,8 @@ footer .social a:hover {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.25rem;
     /* fonts */
-    --title-font: 'Poppins', sans-serif;
-    --body-font: 'DM Sans', sans-serif;
-  }
-  #header.scroll .title {
-    color: var(--text-color-light);
-    transition: 00.5s;
+    --title-font: "Poppins", sans-serif;
+    --body-font: "DM Sans", sans-serif;
   }
   /* reusable classes*/
   .container {
@@ -434,10 +314,9 @@ footer .social a:hover {
     margin-right: auto;
   }
   .section {
-    padding: 10rem 0;
+    padding: 3rem;
   }
-  .section header,
-  #testimonials header {
+  .section header {
     max-width: 32rem;
     text-align: center;
     margin-left: auto;
@@ -459,6 +338,7 @@ footer .social a:hover {
   }
   nav .menu ul li a.title {
     font: 700 1rem var(--body-font);
+    color: var(--body-color);
     -webkit-font-smoothing: antialiased;
   }
   nav .menu ul li a.title.active {
@@ -479,21 +359,9 @@ footer .social a:hover {
     margin: 0 auto;
   }
   #home .image {
-    order: 1;
+    order: 0;
   }
   #home .text {
-    order: 0;
-    max-width: 24rem;
-    text-align: left;
-  }
-  #about .container {
-    grid-auto-flow: column;
-    margin: 0 auto;
-  }
-  #about .image {
-    order: 0;
-  }
-  #about .text {
     order: 1;
     max-width: 24rem;
     text-align: left;
@@ -506,37 +374,28 @@ footer .social a:hover {
     padding-left: 3rem;
     padding-bottom: 3rem;
   }
-  /* reusable testimonials */
-  #testimonials .container {
-    margin-left: auto;
-    margin-right: auto;
-  }
   /* reusable contact */
-  #contact .container {
+  footer .container {
     grid-auto-flow: column;
     align-items: center;
   }
-  #contact .text {
+  footer .text {
     max-width: 25rem;
   }
   /* reusable footer */
   footer.section {
-    padding: 3.75rem 0;
+    padding: 3rem;
   }
   footer .container {
     grid-auto-flow: column;
     align-items: center;
     justify-content: space-between;
   }
-  footer .logo {
-    font-size: 2.25rem;
-  }
 }
-/* BreakPoint 992 > *
+/* BreakPoint 992 > */
 @media (min-width: 992px) {
   :root {
     --title-font-size: 2.25rem;
     --subtitle-font-size: 1.125rem;
   }
 }
-*/
